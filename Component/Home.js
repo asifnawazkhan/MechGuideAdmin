@@ -3,13 +3,12 @@ import { View, ScrollView, StyleSheet } from 'react-native';
 import Menubar from './Menubar';
 import User from './User';
 import Graphdata from './Graphdata'
-import DataCard from './DataCard';
+
 const Home = () => {
   return (
     <View style={styles.container}>
       {/* <Menubar navigation={navigation}/> */}
       <ScrollView contentContainerStyle={styles.scrollViewContent}>
-        <DataCard/>
         <Graphdata/>
         <User/>
         {/* Add more components or content here */}
