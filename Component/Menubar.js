@@ -16,6 +16,7 @@ const Menubar = () => {
   return (
     <>
       {/* Menu Bar */}
+      
       <View style={styles.menuBar}>
       <Image
           source={require('../assets/LogoMechGuide.png')} // Adjust the path as necessary
@@ -38,11 +39,11 @@ const Menubar = () => {
           <Text style={[styles.menuItemText, activeMenu === 'User' && styles.menuItemTextActive]}>User</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={[styles.menuItem, activeMenu === 'Mechanic' && styles.menuItemActive]}
-          onPress={() => handleMenuPress('Mechanic')}
+          style={[styles.menuItem, activeMenu === 'Mechanics' && styles.menuItemActive]}
+          onPress={() => handleMenuPress('Mechanics')}
         >
-          <MaterialCommunityIcons name="wrench" size={24} color={activeMenu === 'Mechanic' ? '#000' : 'rgba(255, 255, 255, 0.38)'} style={styles.icon} />
-          <Text style={[styles.menuItemText, activeMenu === 'Mechanic' && styles.menuItemTextActive]}>Mechanic Request</Text>
+          <MaterialCommunityIcons name="wrench" size={24} color={activeMenu === 'Mechanics' ? '#000' : 'rgba(255, 255, 255, 0.38)'} style={styles.icon} />
+          <Text style={[styles.menuItemText, activeMenu === 'Mechanics' && styles.menuItemTextActive]}>Mechanic Request</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.menuItem, activeMenu === 'Feedback' && styles.menuItemActive]}
@@ -50,6 +51,13 @@ const Menubar = () => {
         >
           <MaterialCommunityIcons name="comment" size={22} color={activeMenu === 'Feedback' ? '#000' : 'rgba(255, 255, 255, 0.38)'} style={styles.icon} />
           <Text style={[styles.menuItemText, activeMenu === 'Feedback' && styles.menuItemTextActive]}>User Complaint</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[styles.menuItem, activeMenu === 'MechanicsComplaint' && styles.menuItemActive]}
+          onPress={() => handleMenuPress('MechanicsComplaint')}
+        >
+          <MaterialCommunityIcons name="comment" size={22} color={activeMenu === 'MechanicsComplaint' ? '#000' : 'rgba(255, 255, 255, 0.38)'} style={styles.icon} />
+          <Text style={[styles.menuItemText, activeMenu === 'MechanicsComplaint' && styles.menuItemTextActive]}>Mechanics Complaint</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.menuItem, activeMenu === 'RegisterNewAdmin' && styles.menuItemActive]}

@@ -11,15 +11,16 @@ const LoginForm = ({ navigation }) => {
   const [error, setError] = useState(null);
 
   const handleLogin = async () => {
-    try {
-      await signInWithEmailAndPassword(auth, username, password);
-      console.log("User logged in successfully");
-      alert("User logged in successfully");
-      navigation.navigate("Home");
-    } catch (error) {
-      setError("Login failed. Please check your credentials.");
-      console.error("Login error:", error.message);
-    }
+    // try {
+    //   await signInWithEmailAndPassword(auth, username, password);
+    //   console.log("User logged in successfully");
+    //   alert("User logged in successfully");
+    //   navigation.navigate("Home");
+    // } catch (error) {
+    //   setError("Login failed. Please check your credentials.");
+    //   console.error("Login error:", error.message);
+    // }
+    navigation.navigate("Home");
   };
 
   return (

@@ -9,6 +9,7 @@ import Register from './Register';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Menubar from './Menubar';
+import MechComplaint from './MechComplaint';
 
 const Stack = createStackNavigator();
 
@@ -26,6 +27,7 @@ function Navation_screen({navigation}) {
           <Stack.Screen name="User" component={User} />
           <Stack.Screen name="Mechanic" component={Mechanics} />
           <Stack.Screen name="Feedback" component={Feedback} />
+          <Stack.Screen name="MechanicsComplaint" component={MechComplaint} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="RegisterNewAdmin" component={Register} />
         </Stack.Navigator>
